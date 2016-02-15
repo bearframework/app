@@ -1,4 +1,16 @@
 {
+    "name": "bearframework/app",
+    "description": "Bear Framework Skeleton Application",
+    "keywords": ["bear framework", "skeleton application"],
+    "homepage": "https://github.com/bearframework/app",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ivo Petkov",
+            "email": "ivo@ivopetkov.com",
+            "homepage": "http://ivopetkov.com"
+        }
+    ],
     "require": {
         "php": ">=5.5.0",
         "bearframework/bearframework": "*"
