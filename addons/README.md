@@ -1,1 +1,0 @@
-The place for addons. The location if this directory is configured in /public/index.php

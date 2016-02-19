@@ -2,12 +2,9 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-$app = new App([
-    'appDir' => __DIR__ . '/../app/',
-    'addonsDir' => __DIR__ . '/../addons/',
-    'dataDir' => __DIR__ . '/../data/',
-    'logsDir' => __DIR__ . '/../logs/',
-    'logErrors' => true
-]);
-
+$app = new BearFramework\App();
+$app->config->appDir = __DIR__ . '/../app/';
+$app->config->dataDir = __DIR__ . '/../data/';
+$app->config->logsDir = __DIR__ . '/../logs/';
+$app->config->logErrors = true;
 $app->run();
