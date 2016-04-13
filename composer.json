@@ -13,6 +13,6 @@
     ],
     "require": {
         "php": ">=5.5.0",
-        "bearframework/bearframework": "*"
+        "bearframework/bearframework": "0.8.*"
     }
 }
