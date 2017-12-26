@@ -2,12 +2,12 @@
 
 use BearFramework\App;
 
-/* @var $app \BearFramework\App */
-/* @var $context \BearFramework\App\AppContext */
+$app = App::get();
+$context = $app->context->get(__FILE__);
 
 // Makes the directory /app/assets publicly accessible.
 // There are two files in this directory that are used for the welcome screen.
-$context->assets->addDir('/assets');
+$context->assets->addDir('assets');
 
 // Creates the returns the welcome screen HTML code.
 $app->routes->add('/', function() use ($context) {
