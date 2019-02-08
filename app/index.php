@@ -2,17 +2,21 @@
 
 use BearFramework\App;
 
+// Retrieves the application instance.
 $app = App::get();
-$context = $app->context->get(__FILE__);
+
+// Retrieves a context object that later will be used.
+$context = $app->contexts->get();
 
 // Makes the directory /app/assets publicly accessible.
 // There are two files in this directory that are used for the welcome screen.
-$context->assets->addDir('assets');
+$context->assets
+        ->addDir('assets');
 
 // Creates the returns the welcome screen HTML code.
-$app->routes->add('/', function() use ($context) {
-    return new App\Response\HTML('
-<!DOCTYPE html>
+$app->routes
+        ->add('/', function() use ($context) {
+            return new App\Response\HTML('<!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
@@ -24,7 +28,7 @@ $app->routes->add('/', function() use ($context) {
                 height: 100%;
             }
             body{
-                background-image: url(' . $context->assets->getUrl('/assets/bearframework-welcome-page-background.png') . ');
+                background-image: url(' . $context->assets->getURL('assets/bearframework-welcome-page-background.png') . ');
                 background-color: #181818;
                 background-position: 16px 16px;
                 color: #fff;
@@ -46,7 +50,7 @@ $app->routes->add('/', function() use ($context) {
                 padding-bottom: 1rem;
             }
             .logo{
-                background-image: url(' . $context->assets->getUrl('/assets/bearframework-welcome-page-logo.svg') . ');
+                background-image: url(' . $context->assets->getURL('assets/bearframework-welcome-page-logo.svg') . ');
                 background-repeat: no-repeat;
                 background-position: center center;
                 background-size: contain;
@@ -79,6 +83,5 @@ $app->routes->add('/', function() use ($context) {
             View the <a href="https://bearframework.com/documentation/" target="_blank">documentation</a> for more information.
         </div>
     </body>
-</html>
-');
-});
+</html>');
+        });
