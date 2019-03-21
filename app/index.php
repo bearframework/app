@@ -80,7 +80,7 @@ $app->routes
         </div>
         <div>
             Now you can open /app/index.php and start building your project.<br>
-            View the <a href="https://bearframework.com/documentation/" target="_blank">documentation</a> for more information.
+            View the <a href="https://bearframework.com/docs/" target="_blank">documentation</a> for more information.
         </div>
     </body>
 </html>');
